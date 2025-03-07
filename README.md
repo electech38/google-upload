@@ -1,3 +1,68 @@
+How to Set Up This Laravel Project
+Step 1: Install Required Dependencies
+You'll need:
+
+PHP (8.x recommended)
+Composer
+Node.js & NPM
+MySQL (or compatible database)
+Step 2: Set Up the Environment
+Copy .env.example to .env:
+sh
+Copy
+Edit
+cp .env.example .env
+Update database credentials in .env:
+ini
+Copy
+Edit
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+Step 3: Install Dependencies
+Run:
+
+sh
+Copy
+Edit
+composer install
+npm install
+Step 4: Set Up Database
+Create a database in MySQL.
+Import database.sql:
+sh
+Copy
+Edit
+mysql -u your_user -p your_database_name < database.sql
+Run migrations and seeders:
+sh
+Copy
+Edit
+php artisan migrate --seed
+Step 5: Generate Application Key
+sh
+Copy
+Edit
+php artisan key:generate
+Step 6: Serve the Application
+You can run:
+
+sh
+Copy
+Edit
+php artisan serve
+Then visit: http://127.0.0.1:8000
+
+Step 7 (Optional): Run with Docker
+If you want to use Docker:
+
+sh
+Copy
+Edit
+docker-compose up -d
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
